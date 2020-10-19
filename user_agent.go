@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func generateUserAgent(browser, os string) string {
+func GenerateUserAgent(browser, os string) string {
 	rand.Seed(time.Now().UnixNano())
 
 	var resultBrowser string
