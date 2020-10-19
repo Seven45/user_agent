@@ -1,4 +1,4 @@
-package user_agent_local
+package user_agent
 
 import (
 	"math/rand"

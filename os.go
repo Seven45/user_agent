@@ -1,4 +1,4 @@
-package user_agent_local
+package user_agent
 
 import (
 	"math/rand"
@@ -7,7 +7,7 @@ import (
 
 func getWindows() string {
 	etc := []string{"WOW64", "Win64; x64"}
-	ver := []string {"10.0", "6." + strconv.Itoa(rand.Intn(4))}
+	ver := []string{"10.0", "6." + strconv.Itoa(rand.Intn(4))}
 	main := "Windows NT "
 
 	version := ver[rand.Intn(1)]
@@ -39,8 +39,7 @@ func getLinux() string {
 	return main + ver[rand.Intn(len(ver))]
 }
 
-
 func getRandomOs() string {
-	os := []func() string {getWindows, getMacOs, getLinux}
+	os := []func() string{getWindows, getMacOs, getLinux}
 	return os[rand.Intn(len(os))]()
 }

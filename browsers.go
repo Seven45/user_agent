@@ -1,4 +1,4 @@
-package user_agent_local
+package user_agent
 
 import (
 	"math/rand"
@@ -44,7 +44,7 @@ func getFirefoxVersions() []string {
 }
 
 func getChromeVersions() []string {
-	return []string {
+	return []string{
 		"86.0.4240",
 		"85.0.4183",
 		"84.0.4147",
@@ -75,7 +75,7 @@ func getChromeVersions() []string {
 }
 
 func getOperaVersions() []string {
-	return []string {
+	return []string{
 		"71.0.3770.148", "71.0.3770.171", "71.0.3770.198", "71.0.3770.228", "71.0.3770.271",
 		"70.0.3728.106", "70.0.3728.119", "70.0.3728.133", "70.0.3728.144", "70.0.3728.154", "70.0.3728.178", "70.0.3728.189", "70.0.3728.71", "70.0.3728.95",
 		"69.0.3686.36", "69.0.3686.49", "69.0.3686.57", "69.0.3686.77", "69.0.3686.95",
@@ -86,7 +86,6 @@ func getOperaVersions() []string {
 		"64.0.3417.119", "64.0.3417.126", "64.0.3417.47", "64.0.3417.54", "64.0.3417.61", "64.0.3417.70", "64.0.3417.73", "64.0.3417.83", "64.0.3417.92",
 	}
 }
-
 
 func getFirefox() string {
 	userAgent := "Mozilla/5.0 (%PLAT%; rv:%VER%) Gecko/20100101 Firefox/%VER%"
@@ -111,8 +110,7 @@ func getOpera() string {
 	return strings.ReplaceAll(userAgent, "%CVER%", chromeVersions[index])
 }
 
-
 func getRandomBrowser() string {
-	functions := []func() string {getFirefox, getChrome, getOpera}
+	functions := []func() string{getFirefox, getChrome, getOpera}
 	return functions[rand.Intn(len(functions))]()
 }
