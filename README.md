@@ -22,4 +22,5 @@ Supported generating for OS:
 - linux
 
 When you pass unknown arguments, user-agent will generated randomly.
+
 Package not send network requests!
