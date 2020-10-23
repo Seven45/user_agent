@@ -21,4 +21,5 @@ Supported generating for OS:
 - macos;
 - linux
 
-When you pass unknown arguments, user-agent is generated randomly.
+When you pass unknown arguments, user-agent will generated randomly.
+Package not send network requests!
